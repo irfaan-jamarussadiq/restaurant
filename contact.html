@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <title>Contact</title>
+</head>
+<body>
+    <script id="replace_with_navbar" src="nav.js"></script>
+    <div class="content">
+        <div class="contentText" height="95vh">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="John Smith" required>
+                    <div class="error"></div>
+                </div>
+        
+                <div>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <div class="error"></div>
+                </div>
+        
+                <div>
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea id="message" name="message" rows="10" cols="40">
+                    </textarea>
+                    <div class="error"></div>
+                </div>
+        
+                <input type="submit" value="SEND">
+                <div class="error"></div>
+            </form>
+            <h2>Email</h2>
+            <p>Email us at example@gmail.com.</p>
+            <h2>Phone</h2>
+            <p>Call us at 999-999-9999.</p>
+        </div>
+    </div>  
+</body>
+</html>

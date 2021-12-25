@@ -1,0 +1,271 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 8px 4px;
+    margin: 7.5px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.homepage-card {
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6%;
+    width: 10%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+    z-index: 1;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    transition: .2s ease;
+    font-size: x-large;
+    font-weight: bold;
+}
+  
+.image-container:hover .overlay {
+    opacity: 0.8;
+    background-color: whitesmoke;
+}
+
+span {
+    display: block;
+    border-bottom: none;
+}
+
+.location {
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+.locationDescription {
+    padding: 20px;
+}
+
+.locationContainer {
+    display: flex;
+    gap: 50%;
+    justify-content: center;
+}
+
+.content {
+    background-color: whitesmoke;
+    padding-top: 5px;
+    height: 100vh;
+}
+
+.contentText {
+    padding: 8px 24px;
+    margin: 8px;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 4px;
+    height: 20px;
+    margin: 8px 0px;
+}
+
+textarea {
+    resize: vertical;
+    width: 50%;
+    padding: 4px;
+    margin: 8px 0px;
+}
+
+input[type=submit] {
+    width: 80px;
+    height: 40px;
+    background-color:whitesmoke;
+    border-radius: 8px;
+}
+
+hr {
+    margin: 0 auto;
+    opacity: 0.25;
+    background: whitesmoke;
+    width: 40%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 40vh);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    text-align: center;
+    padding: 4px;
+    position: relative;
+    z-index: 10;    
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);       
+}
+
+.slideshow-container {
+    height: 80vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#mobile-home-image {
+    display: none;
+}
+
+.slideshow-container img {
+    width: 100%;
+}
+
+#nav-links {
+    padding: 0;
+}
+
+#nav-links li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 16px;
+    font-size: 1.5em;
+}
+
+#nav-links li a, #nav-links li a:hover, .homepage-card a {
+    color: #000;    
+    text-decoration: none;
+}
+
+.homepage-card a {
+    color:black;
+    font-size: 80px;
+    font-weight: bolder;
+    background-color: white;
+    padding: 4px 16px;
+    border-radius: 16px;
+}
+
+#view-menu {
+    font-size: xx-large;
+}
+
+#nav-links li:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+#nav-links li:hover:after {
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+#gallery__img-1 {
+    height: 200%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#gallery__img-11 {
+    display: none;
+}
+
+#gallery__img-4 {
+    grid-column-start: 2;
+}
+
+#gallery__img-5 {   
+    grid-column-start: 3;
+}
+
+.gallery__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        margin: 6px;
+        padding: 8px 4px;
+    }
+    
+    #mobile-home-image {
+        display: block;
+        width: 100%;
+    }
+
+    #pc-home-image {
+        display: none;
+    }
+
+    .gallery {
+        display: block;       
+    }
+
+    #gallery__img-11 {
+        display: block;
+    }
+
+    #gallery__img-1 {
+        display: none;
+    }
+
+    #nav-links li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 12px;
+        margin: 0;
+        font-size: 1.5em;
+    }
+
+    .locationContainer {
+        display: flex;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .locationContainer img {
+        height: 50%;
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    textarea {
+        resize: vertical;
+        width: 100%;
+        padding: 4px;
+        margin: 8px 0px;
+    }
+}
